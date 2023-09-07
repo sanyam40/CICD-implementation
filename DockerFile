@@ -1,7 +1,4 @@
 FROM openjdk
-
-WORKDIR /usr/src/app
-
-COPY . /usr/src/app
-
-CMD ["java","-jar","Payment.war"]
+EXPOSE 9091
+ADD target/Payment.jar Payment.jar
+ENTRYPOINT ["java","-jar","/Payment.jar"]
