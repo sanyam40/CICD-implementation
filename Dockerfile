@@ -1,4 +1,4 @@
 FROM openjdk
-EXPOSE 9091
-ADD target/Payment.jar Payment.jar
+WORKDIR /usr/src/app
+COPY . /usr/src/app
 ENTRYPOINT ["java","-jar","/Payment.jar"]
